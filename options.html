@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>No Ads — Opciones</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      font: 14px/1.5 system-ui, sans-serif;
+      background: #0f1318;
+      color: #e8eef5;
+    }
+    main { max-width: 640px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    p { color: #9aa6b2; }
+    .card {
+      background: #171c24;
+      border: 1px solid #243041;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 18px;
+    }
+    code { background: #0c1016; padding: 2px 6px; border-radius: 4px; }
+    ul { margin: 8px 0 0; padding-left: 18px; color: #c5d0db; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>No Ads</h1>
+    <p>Extensión propia inspirada en el modelo de AdBlock (MV3 + DNR + cosmético), escrita desde cero.</p>
+    <div class="card">
+      <strong>Cómo instalar</strong>
+      <ul>
+        <li>Chrome → <code>chrome://extensions</code></li>
+        <li>Activa “Modo de desarrollador”</li>
+        <li>“Cargar descomprimida” → carpeta <code>no_ads</code></li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>Qué hace</strong>
+      <ul>
+        <li>Bloquea peticiones a redes de anuncios y trackers (Declarative Net Request)</li>
+        <li>Oculta banners/iframes típicos en la página (CSS + MutationObserver)</li>
+        <li>Interruptor on/off en el popup</li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>Notas</strong>
+      <ul>
+        <li>No es una copia del código de AdBlock (propietario/minificado ~331 MB).</li>
+        <li>Las reglas DNR cubren dominios publicitarios comunes; puedes ampliar <code>rules/*.json</code>.</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

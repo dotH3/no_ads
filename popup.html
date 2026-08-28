@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      width: 240px;
+      font: 13px/1.4 system-ui, sans-serif;
+      background: #12161c;
+      color: #e8eef5;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 14px 8px;
+    }
+    header img { width: 28px; height: 28px; }
+    h1 { font-size: 15px; margin: 0; font-weight: 650; }
+    .sub { color: #8b98a8; font-size: 11px; }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-top: 1px solid #1e2630;
+    }
+    .stat { font-variant-numeric: tabular-nums; color: #7ddea5; font-weight: 600; }
+    .switch {
+      position: relative;
+      width: 40px;
+      height: 22px;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; inset: 0;
+      background: #3a4553;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: .15s;
+    }
+    .slider:before {
+      content: "";
+      position: absolute;
+      width: 16px; height: 16px;
+      left: 3px; top: 3px;
+      background: #fff;
+      border-radius: 50%;
+      transition: .15s;
+    }
+    input:checked + .slider { background: #2ecc71; }
+    input:checked + .slider:before { transform: translateX(18px); }
+    footer {
+      padding: 8px 14px 12px;
+      color: #6b7785;
+      font-size: 11px;
+    }
+    a { color: #7ddea5; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" />
+    <div>
+      <h1>No Ads</h1>
+      <div class="sub">bloqueo local MV3</div>
+    </div>
+  </header>
+  <div class="row">
+    <span>Protección</span>
+    <label class="switch">
+      <input type="checkbox" id="enabled" />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="row">
+    <span>Elementos ocultos</span>
+    <span class="stat" id="blocked">0</span>
+  </div>
+  <footer>
+    <a href="options.html" target="_blank">Opciones</a>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
